@@ -18,9 +18,7 @@ class App extends Component {
 
     if (catClicked) {
       this.setState({
-        cats: this.state.cats.sort(function(a, b) {
-          return 0.5 - Math.random();
-        }),
+        cats: this.state.cats.sort(() => 0.5 - Math.random()),
         clickedCats: [],
         score: 0
       });
@@ -30,9 +28,7 @@ class App extends Component {
     } else {
       this.setState(
         {
-          cats: this.state.cats.sort(function(a, b) {
-            return 0.5 - Math.random();
-          }),
+          cats: this.state.cats.sort(() => 0.5 - Math.random()),
           clickedCats: this.state.clickedCats.concat(
             chosenCat
           ),
@@ -42,9 +38,7 @@ class App extends Component {
           if (this.state.score === 12) {
             alert("Yay! You Win!");
             this.setState({
-              cats: this.state.cats.sort(function(a, b) {
-                return 0.5 - Math.random();
-              }),
+              cats: this.state.cats.sort(() => 0.5 - Math.random()),
               clickedCats: [],
               score: 0
             });
@@ -54,18 +48,10 @@ class App extends Component {
     }
   }
 
-  removeCat = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const cats = this.state.cats.filter(cat => cat.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ cats });
-  };
-
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
-
         {this.state.cats.map(cat => (
           <CatCard
             clickCat={this.clickCat}

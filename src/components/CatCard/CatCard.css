@@ -5,6 +5,8 @@
     margin: 15px 45px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     border: 3px solid white;
+    transition: transform .2s; /* Animation */
+    cursor: pointer;
   }
   
   .card > .img-container {
@@ -15,17 +17,8 @@
   .card > .img-container > img {
     width: 100%
   }
-  
-  .card > .remove {
-    color: #ff1744;
-    font-size: 48px;
-    position: absolute;
-    top: -20px;
-    right: 5px;
-    cursor: pointer;
-  }
-  
-  .card > .remove:hover {
-    color: #d50000;
+
+  .card:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
   
