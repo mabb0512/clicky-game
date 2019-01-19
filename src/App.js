@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CatCard from "./components/CatCard";
+import NavBar from "./components/NavBar"
 import Wrapper from "./components/Wrapper";
 import cats from "./data.json";
 import "./App.css";
@@ -51,7 +52,9 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      <Wrapper>
+      <div>
+        <NavBar score={this.state.score}/>
+        <Wrapper>
         {this.state.cats.map(cat => (
           <CatCard
             clickCat={this.clickCat}
@@ -61,6 +64,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      </div>
     );
   }
 

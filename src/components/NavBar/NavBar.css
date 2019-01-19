@@ -1,0 +1,26 @@
+.navbar li {
+    display: inline-block;
+  }
+  
+  .align-left {
+    width: 85%;
+  }
+  
+  .align-right {
+      text-align: right;
+
+  }
+  
+  .navbar {
+    background: blue;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  }
+  
+  li {
+    color: white;
+    padding: 15px 0;
+  }
+  
+  body {
+    font-size: 25px;
+  }
