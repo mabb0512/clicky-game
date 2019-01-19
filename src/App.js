@@ -6,6 +6,7 @@ import cats from "./data.json";
 import "./App.css";
 
 class App extends Component {
+
   state = {
     cats,
     clickedCats: [],
@@ -24,7 +25,7 @@ class App extends Component {
         score: 0
       });
 
-        alert("You lose. Play again?");
+      alert("You lose. Try Again!");
         
     } else {
       this.setState(
@@ -37,19 +38,17 @@ class App extends Component {
         },
         () => {
           if (this.state.score === 12) {
-            alert("Yay! You Win!");
-            this.setState({
+              alert("Yay! You Win!");
+              this.setState({
               cats: this.state.cats.sort(() => 0.5 - Math.random()),
               clickedCats: [],
               score: 0
             });
           }
-          }
-        );
+        });
     }
   }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <div>
@@ -67,6 +66,6 @@ class App extends Component {
       </div>
     );
   }
-
 }
+
 export default App;
