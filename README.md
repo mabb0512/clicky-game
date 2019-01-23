@@ -1,5 +1,7 @@
 This is a memory game with React. The application's UI has been split into components, manage component state, and respond to user events.
 
+URL: https://mabb0512.github.io/clicky-game/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
